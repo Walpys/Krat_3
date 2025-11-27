@@ -60,7 +60,15 @@ public class main {
                         else{
                             System.out.println("This quantity is not available.");
                         }
-                        boughtProducts.add(product);
+                        Product productToSave = new Product(
+                        product.getId(),
+                        product.getCategory(),
+                        product.getName(),
+                        product.getPrice(),
+                        quantity 
+                        );
+
+                        boughtProducts.add(productToSave);
                         System.out.println("add more products? y/n");
                         String answer = scanner.next();
                         if(answer.equalsIgnoreCase("n")){
